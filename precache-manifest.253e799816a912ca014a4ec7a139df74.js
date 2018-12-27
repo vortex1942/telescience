@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/telescience/static/media/3,5.f4581732.png"
   },
   {
-    "revision": "38479f2406ed9d29688c",
+    "revision": "77d8b23185b9552f57a9",
     "url": "/telescience/static/css/main.37ea1fa8.chunk.css"
   },
   {
@@ -76,8 +76,8 @@ self.__precacheManifest = [
     "url": "/telescience/static/media/3,4.d6fabebf.png"
   },
   {
-    "revision": "38479f2406ed9d29688c",
-    "url": "/telescience/static/js/main.38479f24.chunk.js"
+    "revision": "77d8b23185b9552f57a9",
+    "url": "/telescience/static/js/main.77d8b231.chunk.js"
   },
   {
     "revision": "6a85fdbe5d5e515aa58371e0bca8d18a",
@@ -152,7 +152,7 @@ self.__precacheManifest = [
     "url": "/telescience/static/media/7,7.8fbb67c0.png"
   },
   {
-    "revision": "db27c12747e5fbbf8a23ad7b16619ca0",
+    "revision": "f9a588f096cd90bc91baac1448a7beeb",
     "url": "/telescience/index.html"
   }
 ];
