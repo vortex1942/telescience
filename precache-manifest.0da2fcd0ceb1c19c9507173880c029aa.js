@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/telescience/static/css/main.9360e08b.chunk.css"
   },
   {
-    "revision": "6c7519ae79159d1ac88ef1383a8aa60c",
+    "revision": "0f94c6278754d04fd4d4e1b482ddab5f",
     "url": "/telescience/index.html"
   }
 ];
