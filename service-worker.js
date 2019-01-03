@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/telescience/precache-manifest.811a964227d9c275a252d9561382106b.js"
+  "/telescience/precache-manifest.fd4da7d81f7d62baa7dd2a74ccc15265.js"
 );
 
 workbox.clientsClaim();
