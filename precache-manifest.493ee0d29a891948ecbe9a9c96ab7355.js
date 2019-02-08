@@ -8,19 +8,19 @@ self.__precacheManifest = [
     "url": "/telescience/static/js/runtime~main.e715ac22.js"
   },
   {
-    "revision": "f57d95131d365127a366",
-    "url": "/telescience/static/js/main.f57d9513.chunk.js"
+    "revision": "480bd7a401b638e9143b",
+    "url": "/telescience/static/js/main.480bd7a4.chunk.js"
   },
   {
-    "revision": "ec84592916e0810f8c8f",
-    "url": "/telescience/static/js/1.ec845929.chunk.js"
+    "revision": "970bff53e39f0a178ff0",
+    "url": "/telescience/static/js/1.970bff53.chunk.js"
   },
   {
-    "revision": "f57d95131d365127a366",
+    "revision": "480bd7a401b638e9143b",
     "url": "/telescience/static/css/main.7a179ca6.chunk.css"
   },
   {
-    "revision": "cd84477678ac620e90b9136f71ea9d8e",
+    "revision": "0e73a7edb2b3b2422bf8f0b9ec556cc3",
     "url": "/telescience/index.html"
   }
 ];
