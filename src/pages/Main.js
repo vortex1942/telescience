@@ -48,6 +48,7 @@ const Main = props => {
             { name: 'AI core', location: [137, 146] },
             { name: "Captain's Locker", location: [85, 166] },
         ],
+<<<<<<< HEAD
         cogmap2: [
             { name: 'Telescience', location: [104, 120] },
             { name: 'AI core', location: [190, 220] },
@@ -97,6 +98,21 @@ const Main = props => {
             { name: 'AI Core', location: [128, 98] },
             { name: 'Telescience', location: [114, 69] },
         ],
+=======
+        cogmap2: [{ name: 'Telescience', location: [104, 120] }, { name: 'AI core', location: [190, 220] }],
+        faintSignal: [{ name: 'RobustTec Implants', location: [266, 132] }, { name: 'Phaser', location: [285, 162] }],
+        oshan: [{ name: 'AI Core', location: [196, 160] }, { name: 'Telescience', location: [181, 174] }],
+        clarion: [{ name: 'AI Core', location: [133, 99] }, { name: 'Telescience', location: [153, 107] }],
+        destiny: [{ name: 'AI Core', location: [154, 141] }, { name: 'Telescience', location: [174, 104] }],
+        atlas: [{ name: 'AI Core', location: [154, 141] }, { name: 'Telescience', location: [144, 180] }],
+        samedi: [],
+        horizon: [{ name: 'AI Core', location: [114, 119] }, { name: 'Telescience', location: [235, 154] }],
+        mushroom: [{ name: 'AI Core', location: [185, 40] }, { name: 'Telescience', location: [134, 103] }],
+        manta: [{ name: 'AI Core', location: [145, 169] }, { name: 'Telescience', location: [169, 128] }],
+        kondaru: [{ name: 'AI Core', location: [213, 160] }, { name: 'Telescience', location: [123, 92] }],
+        donut2: [{ name: 'AI Core', location: [241, 73] }, { name: 'Telescience', location: [251, 208] }],
+        fleet: [{ name: 'AI Core', location: [128, 98] }, { name: 'Telescience', location: [114, 69] }],
+>>>>>>> ba98acfa7973fd2275443574051e6d36076ce219
     });
     const [zoom, setZoom] = useState(7);
     const scale = zoom / 10;
