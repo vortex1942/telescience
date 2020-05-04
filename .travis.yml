@@ -1,0 +1,21 @@
+language: node_js
+node_js:
+    - 10.8.0
+cache:
+    directories:
+        - node_modules
+branches:
+    only:
+        - master
+script:
+    - yarn test
+    - yarn build
+deploy:
+    provider: pages
+    skip-cleanup: true
+    github-token: $GITHUB_TOKEN
+    keep-history: true
+    target-branch: gh-pages
+    local-dir: build
+    on:
+        branch: master
