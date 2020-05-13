@@ -32,7 +32,7 @@ const HelperText = () => {
                     color="secondary"
                     variant="outlined"
                     size="small"
-                    href="https://github.com/vortex1942/telescience"
+                    href="https://github.com/Kayle7777/telescience"
                     rel="noopener noreferrer"
                     target="_blank"
                 >
@@ -41,19 +41,17 @@ const HelperText = () => {
                 {`\t`}for a detailed readme.
             </p>
             <hr />
-            <p>Original credit goes to Kayle7777.{`\t`}
+            <p>Check out the alpha version of my ChemHelper site. Plenty more features are in store!</p>
             <Button
                 color="secondary"
                 variant="outlined"
                 size="small"
-                href="https://github.com/Kayle7777/telescience"
+                href="https://kayle7777.github.io/chemhelper/"
                 rel="noopener noreferrer"
                 target="_blank"
             >
-                Click Here
+                ChemHelper
             </Button>
-            {`\t`}for a Kayle7777's github
-            </p>
         </>
     );
 };
