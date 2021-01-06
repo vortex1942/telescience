@@ -56,7 +56,7 @@ const Main = props => {
             { name: 'Phaser', location: [285, 162] },
         ],
         oshan: [
-            { name: 'AI Core', location: [196, 160] },
+            { name: 'AI Core', location: [196, 159] },
             { name: 'Telescience', location: [181, 174] },
         ],
         clarion: [
@@ -97,8 +97,8 @@ const Main = props => {
             { name: 'Telescience', location: [114, 69] },
         ],
         donut3: [
-            { name: 'AI Core', location: [128, 98] },
-            { name: 'Telescience', location: [136, 133] },
+            { name: 'AI Core', location: [136, 133] },
+            { name: 'Telescience', location: [156, 76] },
             { name: 'Clown Asylum', location: [244, 244] },
         ],
     });
