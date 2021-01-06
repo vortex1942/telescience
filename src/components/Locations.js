@@ -57,7 +57,7 @@ const Locations = props => {
                             { name: 'solar observatory', location: [99, 85] },
                             { name: 'lava moon', location: [88, 106] },
                             { name: 'mars', location: [191, 135] },
-                            { name: 'ice moon', location: [15, 150] },
+                            { name: 'ice moon', location: [15, 147] },
                             { name: 'biodome', location: [120, 164] },
                             { name: 'museum of lunar history', location: [105, 212] },
                             { name: 'catmandu', location: [194, 260] },
