@@ -46,7 +46,6 @@ const Main = props => {
         cogmap1: [
             { name: 'Telescience', location: [112, 123] },
             { name: 'AI core', location: [137, 146] },
-            { name: "Captain's Locker", location: [85, 166] },
         ],
         cogmap2: [
             { name: 'Telescience', location: [104, 120] },
@@ -86,7 +85,7 @@ const Main = props => {
             { name: 'Telescience', location: [169, 128] },
         ],
         kondaru: [
-            { name: 'AI Core', location: [213, 160] },
+            { name: 'AI Core', location: [217, 161] },
             { name: 'Telescience', location: [123, 92] },
         ],
         donut2: [
@@ -96,6 +95,11 @@ const Main = props => {
         fleet: [
             { name: 'AI Core', location: [128, 98] },
             { name: 'Telescience', location: [114, 69] },
+        ],
+        donut3: [
+            { name: 'AI Core', location: [128, 98] },
+            { name: 'Telescience', location: [136, 133] },
+            { name: 'Clown Asylum', location: [244, 244] },
         ],
     });
     const [zoom, setZoom] = useState(7);
