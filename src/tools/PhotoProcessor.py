@@ -1,18 +1,32 @@
 from select import select
 from PIL import Image, ImageDraw
 from os import walk, getcwd, path
-#root = str(input("Root Directory of images: "))
-#export = str(input("Export Image filename: "))
-rootdir = getcwd()
-imgdir = path.join(rootdir,"src","images","cogmap2")
-rawimgdir = path.join(imgdir, "rawimages")
+
+#rootdir = getcwd()
+#imgdir = path.join(rootdir,"src","images","cogmap2")
+#rawimgdir = path.join(imgdir, "rawimages")
 #print(rootdir)
 #print(imgdir)
 #print(os.listdir(imgdir))
 
+rawimgdir = str(input("Root Directory of RAW images: "))
+imgdir = str(input("Directory for PROCESSED images:"))
 
 
-export = "cogmap2_full"
+
+SELexportfullimage = input("Save a full image? [Y/" f"\033[1mn\033[0m]: ")
+if SELexportfullimage.lower() == "n" or SELexportfullimage.lower() == "no":
+    SELexportfullimage = False
+else:
+    filename = str(input("Export full image filename: "))
+    SELexportfullimage = True
+
+#SELtransparency = "no"
+SELtransparency = input("Make Pink areas transparent?(Slow) [Y/" f"\033[1mn\033[0m]: ")
+if SELtransparency.lower() == "n" or SELtransparency.lower() == "no":
+    SELtransparency = False
+else:
+    SELtransparency = True
 
 
 #input("PAUSE")
@@ -28,13 +42,14 @@ def func_transparancy():
     masterexport.putdata(transparantdata)
     print("TRANSPARENCY PASS COMPLETE")
 
+def func_exportfullimage(imgdir,filename):
+    print("SAVING FULL IMAGE")
+    file = (imgdir+"\\"+filename+".png")
+    print(file)
+    file = open(file, "wb")
+    masterexport.save(file) 
+    print("FILE SAVED")
 
-#selection = input("Make Pink areas transparent?(Slow) [Y/" f"\033[1mn\033[0m]: ")
-selection = "no"
-if selection.lower() == "n" or selection.lower() == "no":
-    selection = False
-else:
-    selection = True
 
 
 print("DecompressionBombWarnings may occour due to image size")
@@ -44,7 +59,7 @@ x = ic = fc = 0
 per = 10
 y = 8640
 for p in lst:
-    file = "S:/telescience/src/images/cogmap2/rawimages/"+str(lst[ic])+".png"
+    file = rawimgdir+"\\"+str(lst[ic])+".png"
     photo = Image.open(file).convert("RGBA") 
     if fc == 10:
         fc = x = 0
@@ -58,12 +73,10 @@ for p in lst:
     ic+=1
     fc+=1
 
-if selection == True:
+if SELtransparency == True:
     func_transparancy()
 
-print("FILE SAVING")
-file = (imgdir+"\\"+export+".png")
-print(file)
-file = open(file, "wb")
-masterexport.save(file) 
-print("FILE SAVED")
+if SELexportfullimage == True:
+    func_exportfullimage(imgdir, filename)
+
+
