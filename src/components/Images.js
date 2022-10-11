@@ -19,20 +19,20 @@ const Images = ({ selectedMap, image }) => {
     );
     function mapInfo(selectedMap) {
         const info = {
-            cogmap1: `/images/cogmap1/`,
-            cogmap2: `/images/cogmap2/`,
-            faintSignal: `/images/faintSignal/`,
-            oshan: `/images/oshan/`,
-            clarion: `/images/clarion/`,
-            destiny: `/images/destiny/`,
-            atlas: `/images/atlas/`,
+            cogmap1: `images/cogmap1/`,
+            cogmap2: `images/cogmap2/`,
+            faintSignal: `images/faintSignal/`,
+            oshan: `images/oshan/`,
+            clarion: `images/clarion/`,
+            destiny: `images/destiny/`,
+            atlas: `images/atlas/`,
             //horizon: `/images/horizon/`,
             //mushroom: `/images/mushroom/`,
             //manta: `/images/manta/`,
-            kondaru: `/images/kondaru/`,
-            donut2: `/images/donut2/`,
+            kondaru: `images/kondaru/`,
+            donut2: `images/donut2/`,
             //fleet: `/images/fleet/`,
-            donut3: `/images/donut3/`,
+            donut3: `images/donut3/`,
         };   
         if (!info[selectedMap]) return info['cogmap1'];
         return info[selectedMap];
