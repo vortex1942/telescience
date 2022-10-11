@@ -30,6 +30,7 @@ const MapSelect = props => {
                 >
                     <option value="cogmap1">Cogmap 1</option>
                     <option value="cogmap2">Cogmap 2</option>
+                    <option value="donut2">Donut 2</option>
                     <option value="donut3">Donut 3</option>
                     <option value="faintSignal">Debris Field</option>
                     <option value="kondaru">Kondaru</option>
@@ -37,9 +38,6 @@ const MapSelect = props => {
                     <option value="clarion">Clarion</option>
                     <option value="destiny">Destiny</option>
                     <option value="atlas">Atlas</option>
-                    <option value="horizon">Horizon</option>
-                    <option value="mushroom">Mushroom</option>
-                    <option value="donut2">Donut 2</option>
 
                 </Select>
             </FormControl>

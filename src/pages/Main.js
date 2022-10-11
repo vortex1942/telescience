@@ -45,30 +45,31 @@ const Main = props => {
     const [favorites, modFavorites] = useState({
         cogmap1: [
             { name: 'Telescience', location: [112, 123] },
-            { name: 'AI core', location: [137, 146] },
+            { name: 'BEES', location: [166, 167] },
         ],
         cogmap2: [
             { name: 'Telescience', location: [104, 120] },
-            { name: 'AI core', location: [190, 220] },
+            { name: 'Research Station', location: [40, 49] },
         ],
         faintSignal: [
-            { name: 'RobustTec Implants', location: [266, 132] },
-            { name: 'Phaser', location: [285, 162] },
+            { name: 'Space Diner', location: [177, 227] },
+            { name: "Moonshiner's Retreat", location: [108, 160] },
+            { name: "Radio Station", location: [277, 268] },
         ],
         oshan: [
-            { name: 'AI Core', location: [196, 159] },
+            { name: 'Spacemas Den', location: [207, 240] },
             { name: 'Telescience', location: [181, 174] },
         ],
         clarion: [
-            { name: 'AI Core', location: [133, 99] },
+            { name: 'Drug Den', location: [142, 173] },
             { name: 'Telescience', location: [153, 107] },
         ],
         destiny: [
-            { name: 'AI Core', location: [154, 141] },
+            { name: 'Nerd Lounge', location: [73, 103] },
             { name: 'Telescience', location: [174, 104] },
         ],
         atlas: [
-            { name: 'AI Core', location: [144, 180] },
+            { name: 'Owlery', location: [140, 185] },
             { name: 'Telescience', location: [140, 164] },
         ],
         samedi: [],
@@ -85,19 +86,19 @@ const Main = props => {
             { name: 'Telescience', location: [169, 128] },
         ],
         kondaru: [
-            { name: 'AI Core', location: [217, 161] },
+            { name: 'Indigo Research Outpost', location: [28, 32] },
             { name: 'Telescience', location: [123, 92] },
         ],
         donut2: [
             { name: 'AI Core', location: [241, 73] },
-            { name: 'Telescience', location: [251, 208] },
+            { name: 'Telescience', location: [223, 188] },
         ],
         fleet: [
             { name: 'AI Core', location: [128, 98] },
             { name: 'Telescience', location: [114, 69] },
         ],
         donut3: [
-            { name: 'AI Core', location: [136, 133] },
+            { name: 'Clown', location: [128, 59] },
             { name: 'Telescience', location: [156, 76] },
             { name: 'Clown Asylum', location: [244, 244] },
         ],

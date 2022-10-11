@@ -23,6 +23,7 @@ imageGetter.js
 
 # Raw map images
 src/images/*/rawimages/*
+public/images/*/rawimages/*
 Thumbs.db
 
 npm-debug.log*
