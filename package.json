@@ -4,8 +4,8 @@
     "private": true,
     "homepage": "https://vortex1942.github.io/telescience",
     "dependencies": {
-        "@material-ui/core": "^3.9.2",
-        "@material-ui/icons": "^3.0.1",
+        "@material-ui/core": "^4.12.4",
+        "@material-ui/icons": "^4.11.3",
         "@material-ui/styles": "^3.0.0-alpha.4",
         "react": "^16.8.1",
         "react-dom": "^16.8.1",
