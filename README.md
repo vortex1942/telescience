@@ -4,7 +4,7 @@ This is a map designed for doing telescience on SS13, specifically on the Goonst
 
 ### What is SS13?
 
-Space Station 13 is a unique multiplayer game, built by its own community for 10+ years. Over time, it has managed to attract thousands of players, and offer an experience no other game can.
+Space Station 13 is a unique multiplayer game, built by its own community for 19+ years. Over time, it has managed to attract thousands of players, and offer an experience no other game can.
 
 A typical space station round will start with the promise of a good time, and end in hilarious chaos, all before being reset to try again.
 
@@ -57,13 +57,16 @@ function imgCoords(x, y, funcScale = scale, pos = tf.pos) {
 }
 ```
 
-### Credits
+### Generating new map images
 
--   [Travis-CI][travis] for their excellent continuous deployment services.
+This repo additionally includes a python script for converting raw ingame screenshots into Fullsize map images, or Goonhub compatable images.
+-   [PhotoProcessor.py][PhotoProcessor] further instructions are included in the python file
+
+### Credits
 
 -   [Material UI][material-ui] for their set of higher level react components and pretty CSS like the dark theme, typography, etc.
 
--   [Goonhub.com][goonhub] for supplying the pngs for these maps.
+-   [Goonstation Contributors][goonstation] for creating all of these great maps.
 
 ---
 
@@ -77,10 +80,11 @@ function imgCoords(x, y, funcScale = scale, pos = tf.pos) {
 
 -   **Live webpage** => hosted on [Github Pages][github pages]
 
-[travis]: https://travis-ci.org/
 [goonhub]: https://goonhub.com/
 [material-ui]: https://material-ui.com/
+[goonstation]: https://github.com/goonstation/goonstation
 [byond]: http://www.byond.com/
+[PhotoProcessor]: https://github.com/vortex1942/telescience/blob/master/src/tools/PhotoProcessor.py
 [telescience info]: https://wiki.ss13.co/Telescience
 [ss13 wiki]: https://wiki.ss13.co/Main_Page
 [github link]: https://github.com/kayle7777
