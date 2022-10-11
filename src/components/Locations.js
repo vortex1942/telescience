@@ -60,7 +60,7 @@ const Locations = props => {
                             { name: 'mars', location: [191, 135] },
                             { name: 'meat station', location: [209, 23] },
                             { name: 'museum of lunar history', location: [105, 212] },
-                            { name: 'solar observatory', location: [99, 85] },
+                            { name: 'solar observatory', location: [97, 87] },
                         ].map(loc => {
                             const [xModifier, yModifier] = math.modifiers;
                             const [xDivisor, yDivisor] = math.divisors;
