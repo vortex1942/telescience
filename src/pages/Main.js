@@ -45,7 +45,7 @@ const Main = props => {
     const [favorites, modFavorites] = useState({
         cogmap1: [
             { name: 'Telescience', location: [112, 123] },
-            { name: 'BEES', location: [166, 167] },
+            { name: 'Jazz Bar', location: [159, 174] },
         ],
         cogmap2: [
             { name: 'Telescience', location: [104, 120] },
@@ -98,7 +98,7 @@ const Main = props => {
             { name: 'Telescience', location: [114, 69] },
         ],
         donut3: [
-            { name: 'Clown', location: [128, 59] },
+            { name: 'Clown Hell', location: [128, 59] },
             { name: 'Telescience', location: [156, 76] },
             { name: 'Clown Asylum', location: [244, 244] },
         ],
