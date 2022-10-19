@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "034057634a822d41d7f2",
+    "revision": "24a693ad4e187e2905df",
     "url": "/telescience/static/css/main.e3f7f23b.chunk.css"
   },
   {
-    "revision": "034057634a822d41d7f2",
-    "url": "/telescience/static/js/main.46053bf2.chunk.js"
+    "revision": "24a693ad4e187e2905df",
+    "url": "/telescience/static/js/main.2692134a.chunk.js"
   },
   {
     "revision": "7fb4757d5aa59309671c",
@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/telescience/static/media/space.973ebe4f.png"
   },
   {
-    "revision": "24b41248301add99ecd56b8081f276a1",
+    "revision": "e16e335fb6fd5f0d84564da73963a9ae",
     "url": "/telescience/index.html"
   }
 ];
