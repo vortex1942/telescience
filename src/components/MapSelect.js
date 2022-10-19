@@ -32,6 +32,7 @@ const MapSelect = props => {
                     <option value="cogmap2">Cogmap 2</option>
                     <option value="donut2">Donut 2</option>
                     <option value="donut3">Donut 3</option>
+                    <option value="nadir">Nadir</option>
                     <option value="faintSignal">Debris Field</option>
                     <option value="kondaru">Kondaru</option>
                     <option value="oshan">Oshan</option>

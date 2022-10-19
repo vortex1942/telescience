@@ -41,7 +41,7 @@ const Main = props => {
         pos: [-2200, -2000],
         selectedTile: [139, 192],
     });
-    const [selectedMap, selectMap] = useState('cogmap1');
+    const [selectedMap, selectMap] = useState('nadir');
     const [favorites, modFavorites] = useState({
         cogmap1: [
             { name: 'Telescience', location: [112, 123] },
@@ -101,6 +101,10 @@ const Main = props => {
             { name: 'Clown Hell', location: [128, 59] },
             { name: 'Telescience', location: [156, 76] },
             { name: 'Clown Asylum', location: [244, 244] },
+        ],
+        nadir: [
+            { name: 'The Ring', location: [175, 115] },
+            { name: 'Telescience', location: [140, 162] },
         ],
     });
     const [zoom, setZoom] = useState(7);

@@ -22,6 +22,7 @@ const Images = ({ selectedMap, image }) => {
             cogmap1: `images/cogmap1/`,
             cogmap2: `images/cogmap2/`,
             faintSignal: `images/faintSignal/`,
+            nadir: `images/nadir`,
             oshan: `images/oshan/`,
             clarion: `images/clarion/`,
             destiny: `images/destiny/`,
