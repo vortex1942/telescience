@@ -25,7 +25,7 @@ const Images = ({ selectedMap, image }) => {
             nadir: `images/nadir`,
             oshan: `images/oshan/`,
             clarion: `images/clarion/`,
-            destiny: `images/destiny/`,
+            //destiny: `images/destiny/`,
             atlas: `images/atlas/`,
             //horizon: `/images/horizon/`,
             //mushroom: `/images/mushroom/`,

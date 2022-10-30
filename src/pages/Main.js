@@ -39,9 +39,9 @@ const Main = props => {
         initial: [0, 0],
         mouse: [0, 0],
         pos: [-2200, -2000],
-        selectedTile: [139, 192],
+        selectedTile: [150, 150],
     });
-    const [selectedMap, selectMap] = useState('nadir');
+    const [selectedMap, selectMap] = useState('cogmap1');
     const [favorites, modFavorites] = useState({
         cogmap1: [
             { name: 'Telescience', location: [112, 123] },
