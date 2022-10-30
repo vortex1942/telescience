@@ -44,7 +44,7 @@ const Locations = props => {
                 variant="overline"
                 className={classes.headerText}
             >
-                expedition locations
+                Adventure Zones
                 <IconButton disabled className={collapseIn ? classes.arrow : classes.arrowShift}>
                     <Arrow />
                 </IconButton>

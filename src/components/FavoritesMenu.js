@@ -79,7 +79,7 @@ const FavoritesMenu = props => {
                                         });
                                     }}
                                     FormHelperTextProps={{ style: { textAlign: 'center' } }}
-                                    helperText={`Real: [${each.location.toString()}] ----- Console: [${each
+                                    helperText={`Real: [${each.location.toString()}] --- Console: [${each
                                         .location[0] /
                                         math.divisors[0] +
                                         math.modifiers[0]},${each.location[1] / math.divisors[1] + math.modifiers[1]}]`}
