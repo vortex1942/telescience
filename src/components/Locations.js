@@ -4,7 +4,6 @@ import { Paper, Typography, Collapse, IconButton } from '@material-ui/core';
 import { KeyboardArrowDown as Arrow } from '@material-ui/icons';
 import MapIcon from '@material-ui/icons/Map';
 
-
 const styles = theme => ({
     main: {
         // Height of button that's being translated
@@ -35,11 +34,9 @@ const styles = theme => ({
     },
 });
 
-
 const Locations = props => {
     const { classes, math, selectMap } = props;
     const [collapseIn, collapse] = useState(false);
-
     return (
         <Paper className={classes.main}>
             <Typography
@@ -47,12 +44,12 @@ const Locations = props => {
                 align="center"
                 variant="overline"
                 className={classes.headerText}
-            >Adventure Zones
+            >
+                Adventure Zones
                 <IconButton disabled className={collapseIn ? classes.arrow : classes.arrowShift}>
                     <Arrow />
                 </IconButton>
             </Typography>
-            
             <Collapse in={collapseIn}>
                 <Typography component="div" variant="body2" className={classes.list}>
                     <ul>
