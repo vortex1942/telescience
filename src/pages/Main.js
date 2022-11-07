@@ -106,6 +106,10 @@ const Main = props => {
             { name: 'The Ring', location: [175, 115] },
             { name: 'Telescience', location: [140, 162] },
         ],
+        pamgoc: [
+            { name: 'The Ring', location: [175, 115] },
+            { name: 'Telescience', location: [140, 162] },
+        ],
     });
     const [zoom, setZoom] = useState(7);
     const scale = zoom / 10;

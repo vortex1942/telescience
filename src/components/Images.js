@@ -34,6 +34,7 @@ const Images = ({ selectedMap, image }) => {
             donut2: `images/donut2/`,
             //fleet: `/images/fleet/`,
             donut3: `images/donut3/`,
+            pamgoc: `images/pamgoc/`,
             /*
             //Leaving this here, Ideally Goonhub will be added to the CI/CD eventually so we don't need to update maps
             cogmap1: `https://goonhub.com/images/maps/cogmap/z1`,
