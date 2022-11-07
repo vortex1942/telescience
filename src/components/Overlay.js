@@ -91,9 +91,6 @@ const Overlay = props => {
         xModifier = gpsValues.input[0] - gpsValues.actualX[0] / xDivisor,
         yModifier = gpsValues.input[1] - gpsValues.actualY[0] / yDivisor;
 
-        // DELETE ME TEMP
-        console.log("Overlay: ",selectedMap)
-
     return (
         <>
             <div className={classes.main}>

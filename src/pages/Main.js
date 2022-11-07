@@ -106,7 +106,7 @@ const Main = props => {
             { name: 'The Ring', location: [175, 115] },
             { name: 'Telescience', location: [140, 162] },
         ],
-        pamgoc: [
+        adventurezone: [
             { name: 'Ainley Staff Retreat', location: [158, 257] },
             { name: 'Biodome', location: [120, 164] },
             { name: 'Ice moon', location: [15, 147] },

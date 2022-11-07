@@ -37,14 +37,8 @@ const styles = theme => ({
 
 
 const Locations = props => {
-    const { classes, math, selectMap, selectedMap } = props;
+    const { classes, math, selectMap } = props;
     const [collapseIn, collapse] = useState(false);
-    //const [selectedMap, selectMap] = useState(selectMap);
-    
-    
-    // DELETE ME TEMP
-    console.log("Locations: ",selectedMap)
-
 
     return (
         <Paper className={classes.main}>
@@ -53,8 +47,7 @@ const Locations = props => {
                 align="center"
                 variant="overline"
                 className={classes.headerText}
-            >
-                Adventure Zones
+            >Adventure Zones
                 <IconButton disabled className={collapseIn ? classes.arrow : classes.arrowShift}>
                     <Arrow />
                 </IconButton>
@@ -85,10 +78,13 @@ const Locations = props => {
                             );
                         })}
                     </ul>
-                <IconButton color="white" onClick={() => selectMap("pamgoc")}>
-                <MapIcon/>
-                 <div class={classes.line}>&ensp;SPOILERS AHEAD</div>
+                
+                {/*Changes map to AdventureZone, may turn this into a captcha eg. How many Go-Karts are in the VR arcade*/}
+                <IconButton color="default" onClick={() => selectMap("adventurezone")}>
+                    <MapIcon/> 
+                    <div className={classes.line}>&ensp;SPOILERS AHEAD</div>
                 </IconButton>
+                
                 </Typography>
             </Collapse>
         </Paper>

@@ -20,7 +20,6 @@ const MapSelect = props => {
         <Paper className={classes.paper}>
             <FormControl className={classes.textField}>
                 <Select
-                    filterOption={(option) => option.value !== "pamgoc"}
                     MenuProps={classes.menu}
                     native
                     value={selectedMap}
@@ -29,6 +28,7 @@ const MapSelect = props => {
                         return selectMap(val);
                     }}
                 >
+                    <option hidden value="adventurezone">Adventure Zone</option>
                     <option value="faintSignal">Debris Field</option>
                     <option value="cogmap1">Cogmap 1</option>
                     <option value="cogmap2">Cogmap 2</option>
@@ -38,8 +38,7 @@ const MapSelect = props => {
                     <option value="kondaru">Kondaru</option>
                     <option value="oshan">Oshan</option>
                     <option value="clarion">Clarion</option>
-                    <option value="atlas">Atlas</option>
-                    <option hidden value="pamgoc">z2 Adventure Zone</option>
+                    <option value="atlas">Atlas</option> 
 
                 </Select>
             </FormControl>
