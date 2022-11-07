@@ -90,6 +90,10 @@ const Overlay = props => {
         yDivisor = gpsValues.actualY[1] - gpsValues.actualY[0],
         xModifier = gpsValues.input[0] - gpsValues.actualX[0] / xDivisor,
         yModifier = gpsValues.input[1] - gpsValues.actualY[0] / yDivisor;
+
+        // DELETE ME TEMP
+        console.log("Overlay: ",selectedMap)
+
     return (
         <>
             <div className={classes.main}>
@@ -320,7 +324,13 @@ const Overlay = props => {
                 <IconButton tabIndex={-1} className={classes.goto} onClick={() => centerCoords()}>
                     <GoTo />
                 </IconButton>
-                <Locations math={{ divisors: [xDivisor, yDivisor], modifiers: [xModifier, yModifier] }} />
+                
+                
+                <Locations 
+                math={{ divisors: [xDivisor, yDivisor], modifiers: [xModifier, yModifier]}} 
+                currentmap={selectedMap}  />
+
+                
             </div>
             <div className={classes.rightPanel}>
                 <MapSelect selectMap={selectMap} selectedMap={selectedMap} />

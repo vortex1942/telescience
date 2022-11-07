@@ -37,9 +37,14 @@ const styles = theme => ({
 
 
 const Locations = props => {
-    const { classes, math } = props;
+    const { classes, math, currentmap } = props;
     const [collapseIn, collapse] = useState(false);
-    const [selectedMap, selectMap] = useState();
+    const [selectedMap, selectMap] = useState(currentmap);
+    
+    
+    // DELETE ME TEMP
+    console.log("Locations: ",selectedMap)
+
 
     return (
         <Paper className={classes.main}>
@@ -53,7 +58,7 @@ const Locations = props => {
                 <IconButton color="primary" aria-label="add to shopping cart" onClick={() => selectMap("pamgoc")}>
                 <AddShoppingCartIcon />
                 </IconButton>
-                <h3>Temp,{selectedMap}</h3>
+                <h3>Temp,{currentmap}</h3>
                 Adventure Zones
                 <IconButton disabled className={collapseIn ? classes.arrow : classes.arrowShift}>
                     <Arrow />
@@ -88,7 +93,6 @@ const Locations = props => {
                 </Typography>
             </Collapse>
         </Paper>
-
     );
 };
 
