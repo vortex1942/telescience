@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import { Paper, Typography, Collapse, IconButton } from '@material-ui/core';
 import { KeyboardArrowDown as Arrow } from '@material-ui/icons';
+import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
+
 
 const styles = theme => ({
     main: {
@@ -33,9 +35,12 @@ const styles = theme => ({
     },
 });
 
+
 const Locations = props => {
     const { classes, math } = props;
     const [collapseIn, collapse] = useState(false);
+    const [selectedMap, selectMap] = useState();
+
     return (
         <Paper className={classes.main}>
             <Typography
@@ -44,11 +49,17 @@ const Locations = props => {
                 variant="overline"
                 className={classes.headerText}
             >
+            
+                <IconButton color="primary" aria-label="add to shopping cart" onClick={() => selectMap("pamgoc")}>
+                <AddShoppingCartIcon />
+                </IconButton>
+                <h3>Temp,{selectedMap}</h3>
                 Adventure Zones
                 <IconButton disabled className={collapseIn ? classes.arrow : classes.arrowShift}>
                     <Arrow />
                 </IconButton>
             </Typography>
+            
             <Collapse in={collapseIn}>
                 <Typography component="div" variant="body2" className={classes.list}>
                     <ul>
@@ -77,6 +88,7 @@ const Locations = props => {
                 </Typography>
             </Collapse>
         </Paper>
+
     );
 };
 
