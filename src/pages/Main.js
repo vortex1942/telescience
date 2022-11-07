@@ -106,6 +106,16 @@ const Main = props => {
             { name: 'The Ring', location: [175, 115] },
             { name: 'Telescience', location: [140, 162] },
         ],
+        adventurezone: [
+            { name: 'Ainley Staff Retreat', location: [158, 257] },
+            { name: 'Biodome', location: [120, 164] },
+            { name: 'Ice moon', location: [15, 147] },
+            { name: 'Lava moon', location: [88, 106] },
+            { name: 'Mars', location: [190, 135] },
+            { name: 'Meat Station', location: [209, 23] },
+            { name: 'Museum of Lunar History', location: [105, 212] },
+            { name: 'Solar Observatory', location: [97, 87] }
+        ],
     });
     const [zoom, setZoom] = useState(7);
     const scale = zoom / 10;

@@ -320,7 +320,11 @@ const Overlay = props => {
                 <IconButton tabIndex={-1} className={classes.goto} onClick={() => centerCoords()}>
                     <GoTo />
                 </IconButton>
-                <Locations math={{ divisors: [xDivisor, yDivisor], modifiers: [xModifier, yModifier] }} />
+                <Locations 
+                math={{ divisors: [xDivisor, yDivisor], modifiers: [xModifier, yModifier]}} 
+                selectMap={selectMap}
+                selectedMap={selectedMap}   
+                />   
             </div>
             <div className={classes.rightPanel}>
                 <MapSelect selectMap={selectMap} selectedMap={selectedMap} />
