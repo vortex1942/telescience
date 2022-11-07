@@ -328,7 +328,8 @@ const Overlay = props => {
                 
                 <Locations 
                 math={{ divisors: [xDivisor, yDivisor], modifiers: [xModifier, yModifier]}} 
-                currentmap={selectedMap}  />
+                selectMap={selectMap}
+                selectedMap={selectedMap}   />
 
                 
             </div>
