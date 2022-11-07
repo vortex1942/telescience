@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import { Paper, Typography, Collapse, IconButton } from '@material-ui/core';
 import { KeyboardArrowDown as Arrow } from '@material-ui/icons';
-import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
+import MapIcon from '@material-ui/icons/Map';
 
 
 const styles = theme => ({
@@ -54,11 +54,6 @@ const Locations = props => {
                 variant="overline"
                 className={classes.headerText}
             >
-            
-                <IconButton color="primary" aria-label="add to shopping cart" onClick={() => selectMap("pamgoc")}>
-                <AddShoppingCartIcon />
-                </IconButton>
-                <h3>Temp,{selectedMap}</h3>
                 Adventure Zones
                 <IconButton disabled className={collapseIn ? classes.arrow : classes.arrowShift}>
                     <Arrow />
@@ -73,7 +68,7 @@ const Locations = props => {
                             { name: 'biodome', location: [120, 164] },
                             { name: 'ice moon', location: [15, 147] },
                             { name: 'lava moon', location: [88, 106] },
-                            { name: 'mars', location: [191, 135] },
+                            { name: 'mars', location: [190, 135] },
                             { name: 'meat station', location: [209, 23] },
                             { name: 'museum of lunar history', location: [105, 212] },
                             { name: 'solar observatory', location: [97, 87] },
@@ -90,6 +85,10 @@ const Locations = props => {
                             );
                         })}
                     </ul>
+                <IconButton color="white" onClick={() => selectMap("pamgoc")}>
+                <MapIcon/>
+                 <div class={classes.line}>&ensp;SPOILERS AHEAD</div>
+                </IconButton>
                 </Typography>
             </Collapse>
         </Paper>
