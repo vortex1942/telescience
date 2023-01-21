@@ -8,7 +8,7 @@ Space Station 13 is a unique multiplayer game, built by its own community for 19
 
 A typical space station round will start with the promise of a good time, and end in hilarious chaos, all before being reset to try again.
 
-### How can I play?
+### How can I play?  
 
 1. [Install Byond](#extra-info)
 2. Select your [favorite](#extra-info) Space Station 13 server
