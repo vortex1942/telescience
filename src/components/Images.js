@@ -22,8 +22,6 @@ const Images = ({ selectedMap, image }) => {
             cogmap1: `images/cogmap1/`,
             cogmap2: `images/cogmap2/`,
             faintSignal: `images/faintSignal/`,
-            //nadir: `images/nadir`,
-            //oshan: `images/oshan/`,
             nadir: `https://goonhub.com/images/maps/nadir/z1`,
             oshan: `https://goonhub.com/images/maps/oshan/z1`,
             clarion: `images/clarion/`,
@@ -53,6 +51,8 @@ const Images = ({ selectedMap, image }) => {
             donut2: `https://goonhub.com/images/maps/donut2/z1`,
             fleet: `https://goonhub.com/images/maps/bellerophon%20fleet/z1`,
             donut3: `https://goonhub.com/images/maps/donut3/z1`,
+            //nadir: `images/nadir`,
+            //oshan: `images/oshan/`,
             */
         };   
         if (!info[selectedMap]) return info['cogmap1'];
