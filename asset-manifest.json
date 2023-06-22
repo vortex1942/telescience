@@ -1,14 +1,14 @@
 {
-  "main.css": "/telescience/static/css/main.e3f7f23b.chunk.css",
-  "main.js": "/telescience/static/js/main.60e42b61.chunk.js",
-  "main.js.map": "/telescience/static/js/main.60e42b61.chunk.js.map",
-  "runtime~main.js": "/telescience/static/js/runtime~main.fc6f4c7c.js",
-  "runtime~main.js.map": "/telescience/static/js/runtime~main.fc6f4c7c.js.map",
-  "static/js/2.cc6740f8.chunk.js": "/telescience/static/js/2.cc6740f8.chunk.js",
-  "static/js/2.cc6740f8.chunk.js.map": "/telescience/static/js/2.cc6740f8.chunk.js.map",
-  "index.html": "/telescience/index.html",
-  "precache-manifest.3b231540ac53b7234bf738cb2671bd56.js": "/telescience/precache-manifest.3b231540ac53b7234bf738cb2671bd56.js",
-  "service-worker.js": "/telescience/service-worker.js",
-  "static/css/main.e3f7f23b.chunk.css.map": "/telescience/static/css/main.e3f7f23b.chunk.css.map",
-  "static/media/space.png": "/telescience/static/media/space.973ebe4f.png"
+  "files": {
+    "main.css": "/telescience/static/css/main.65489345.css",
+    "main.js": "/telescience/static/js/main.52e8deba.js",
+    "static/media/space.png": "/telescience/static/media/space.65d39b69e87294b6fb3f.png",
+    "index.html": "/telescience/index.html",
+    "main.65489345.css.map": "/telescience/static/css/main.65489345.css.map",
+    "main.52e8deba.js.map": "/telescience/static/js/main.52e8deba.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.65489345.css",
+    "static/js/main.52e8deba.js"
+  ]
 }
