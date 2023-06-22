@@ -4,7 +4,6 @@ on:
     branches:
       - master
   workflow_dispatch:
-    
      
 permissions:
   contents: write
@@ -20,7 +19,7 @@ jobs:
       - name: Install and Build 🔧
         run: |
           npm ci
-          yarn build
+          npm run build
           
 
       - name: Deploy 🚀

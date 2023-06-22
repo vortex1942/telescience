@@ -19,24 +19,8 @@ const Images = ({ selectedMap, image }) => {
     );
     function mapInfo(selectedMap) {
         const info = {
-            cogmap1: `images/cogmap1/`,
-            cogmap2: `images/cogmap2/`,
-            faintSignal: `images/faintSignal/`,
+            
             nadir: `https://goonhub.com/images/maps/nadir/z1`,
-            oshan: `https://goonhub.com/images/maps/oshan/z1`,
-            clarion: `images/clarion/`,
-            //destiny: `images/destiny/`,
-            atlas: `images/atlas/`,
-            //horizon: `/images/horizon/`,
-            //mushroom: `/images/mushroom/`,
-            //manta: `/images/manta/`,
-            kondaru: `images/kondaru/`,
-            donut2: `images/donut2/`,
-            //fleet: `/images/fleet/`,
-            donut3: `images/donut3/`,
-            adventurezone: `images/adventurezone/`,
-            /*
-            //Leaving this here, Ideally Goonhub will be added to the CI/CD eventually so we don't need to update maps
             cogmap1: `https://goonhub.com/images/maps/cogmap/z1`,
             cogmap2: `https://goonhub.com/images/maps/cogmap2/z1`,
             faintSignal: `https://goonhub.com/images/maps/cogmap2/z3`,
@@ -51,8 +35,25 @@ const Images = ({ selectedMap, image }) => {
             donut2: `https://goonhub.com/images/maps/donut2/z1`,
             fleet: `https://goonhub.com/images/maps/bellerophon%20fleet/z1`,
             donut3: `https://goonhub.com/images/maps/donut3/z1`,
-            //nadir: `images/nadir`,
-            //oshan: `images/oshan/`,
+            adventurezone: `images/adventurezone/`,
+
+            /*
+            //Leaving this here, Ideally Goonhub will be added to the CI/CD eventually so we don't need to update maps
+            cogmap1: `images/cogmap1/`,
+            cogmap2: `images/cogmap2/`,
+            faintSignal: `images/faintSignal/`,
+            nadir: `images/nadir`,
+            oshan: `images/oshan/`,
+            clarion: `images/clarion/`,
+            //destiny: `images/destiny/`,
+            atlas: `images/atlas/`,
+            //horizon: `/images/horizon/`,
+            //mushroom: `/images/mushroom/`,
+            //manta: `/images/manta/`,
+            kondaru: `images/kondaru/`,
+            donut2: `images/donut2/`,
+            //fleet: `/images/fleet/`,
+            donut3: `images/donut3/`,
             */
         };   
         if (!info[selectedMap]) return info['cogmap1'];
