@@ -3,7 +3,7 @@ on:
   push:
     branches:
      - main
-  commit:
+  create:
     branches:
     - main
      
