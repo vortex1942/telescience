@@ -6,9 +6,9 @@ const Images = ({ selectedMap, image }) => {
         <div onDragStart={e => e.preventDefault()}>
             {(() => {
                 const arr = [];
-                for (let i = 0; i < 8; i++) {
-                    for (let g = 0; g < 8; g++) {
-                        arr.push(`${i},${g}`);
+                for (let i = 0; i < 10; i++) {
+                    for (let g = 0; g < 10; g++) {
+                        arr.push(`${g},${i}`);
                     }
                 }
                 return arr;
@@ -20,41 +20,21 @@ const Images = ({ selectedMap, image }) => {
     function mapInfo(selectedMap) {
         const info = {
             
-            nadir: `https://goonhub.com/images/maps/nadir/z1`,
-            cogmap1: `https://goonhub.com/images/maps/cogmap/z1`,
-            cogmap2: `https://goonhub.com/images/maps/cogmap2/z1`,
-            faintSignal: `https://goonhub.com/images/maps/cogmap2/z3`,
-            oshan: `https://goonhub.com/images/maps/oshan/z1`,
-            clarion: `https://goonhub.com/images/maps/clarion/z1`,
-            destiny: `https://goonhub.com/images/maps/destiny/z1`,
-            atlas: `https://goonhub.com/images/maps/atlas/z1`,
-            horizon: `https://goonhub.com/images/maps/horizon/z1`,
-            mushroom: `https://goonhub.com/images/maps/mushroom/z1`,
-            manta: `https://goonhub.com/images/maps/manta/z1`,
-            kondaru: `https://goonhub.com/images/maps/kondaru/z1`,
-            donut2: `https://goonhub.com/images/maps/donut2/z1`,
-            fleet: `https://goonhub.com/images/maps/bellerophon%20fleet/z1`,
-            donut3: `https://goonhub.com/images/maps/donut3/z1`,
+
+            nadir: `https://goonhub.com/storage/maps/nadir`,
+            cogmap1: `https://goonhub.com/storage/maps/cogmap`,
+            cogmap2: `https://goonhub.com/storage/maps/cogmap2`,
+            faintSignal: `https://goonhub.com/storage/maps/debris`,
+            oshan: `https://goonhub.com/storage/maps/oshan`,
+            clarion: `https://goonhub.com/storage/maps/clarion`,
+            destiny: `https://goonhub.com/storage/maps/destiny`,
+            atlas: `https://goonhub.com/storage/maps/atlas`,
+            manta: `https://goonhub.com/storage/maps/manta`,
+            kondaru: `https://goonhub.com/storage/maps/kondaru`,
+            donut2: `https://goonhub.com/storage/maps/donut2`,
+            donut3: `https://goonhub.com/storage/maps/donut3`,
             adventurezone: `images/adventurezone/`,
 
-            /*
-            //Leaving this here, Ideally Goonhub will be added to the CI/CD eventually so we don't need to update maps
-            cogmap1: `images/cogmap1/`,
-            cogmap2: `images/cogmap2/`,
-            faintSignal: `images/faintSignal/`,
-            nadir: `images/nadir`,
-            oshan: `images/oshan/`,
-            clarion: `images/clarion/`,
-            //destiny: `images/destiny/`,
-            atlas: `images/atlas/`,
-            //horizon: `/images/horizon/`,
-            //mushroom: `/images/mushroom/`,
-            //manta: `/images/manta/`,
-            kondaru: `images/kondaru/`,
-            donut2: `images/donut2/`,
-            //fleet: `/images/fleet/`,
-            donut3: `images/donut3/`,
-            */
         };   
         if (!info[selectedMap]) return info['cogmap1'];
         return info[selectedMap];

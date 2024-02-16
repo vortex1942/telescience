@@ -18,8 +18,8 @@ const styles = theme => ({
     },
     image: {
         verticalAlign: 'middle',
-        width: 1200,
-        height: 1200,
+        width: 960,
+        height: 960,
     },
     imageUnclicked: {
         cursor: 'grab',
