@@ -1,5 +1,5 @@
-#This script processes screenshots from the Map-world verb in SS13
-#They can be processed into Full map images, and/or Goonhub Compatable images
+# This script processes screenshots from the Map-world verb in SS13
+# They can be processed into Full map images, and/or Goonhub Compatable images
 
 # ***Suggested __build.dm configuration***
 #   #define IM_REALLY_IN_A_FUCKING_HURRY_HERE 1 // Skips atmo build, Hides lobby & changelogs (Gotta go fast!)
@@ -10,34 +10,34 @@
 # Don't forget to enable your map override
 
 # ***Ingame STEPS***
-#1. Give yourself Godmode, and the XRAY mutation [Toggle-Your-Godmode, Manage-Bioeffects > Name > + > XRAY]
-#2. Place PDA and all items in backpack (Either hide your backpack in a locker or repeat Step4)
-#3. Del-all /atom/moveable/screen/hud
-#4. Right-click the Yellow stamina box > View Variables > Edit [visibility] = 0
-#5. Run Map-World command (All defaults except for Z-Level)
-#6 Place screenshots into a folder dedicated for raw images (You should have 100 Images)
-#7 Create an output folder
-#8 Run the script and follow the prompts (Prompt Explanations below)
+# 1. Give yourself Godmode, and the XRAY mutation [Toggle-Your-Godmode, Manage-Bioeffects > Name > + > XRAY]
+# 2. Place PDA and all items in backpack (Either hide your backpack in a locker or repeat Step4)
+# 3. Del-all /atom/moveable/screen/hud
+# 4. Right-click the Yellow stamina box > View Variables > Edit [visibility] = 0
+# 5. Game > Effects > Parallax # Lets us turn space purple
+# 6. Run Map-World command (All defaults except for Z-Level)
+# 7 Place screenshots into a folder dedicated for raw images (You should have 100 Images)
+# 8 Create an output folder
+# 9 Run the script and follow the prompts (Prompt Explanations below)
 
 # Script Prompts
-#RAW Image directory/           // Location of map screenshots,     (USE A SEPERATE FOLDER for each map, There should only be 100 images)
-#PROCESSED Image Directory      // Location of all outputed files   (Files with matching names will be overwritten)
-#RAW Image Renaming         [N] // Rename all .png files in the raw image folder (Optional)
-    #RAW Image Name             // New [name] for RAW images, Uses "[name]_[INT].png" format
-#Export Full Image          [Y] // Export a full image of the map
-    #Export Image Name          // Name of the Full exported image  (E.g Cogmap1_full)
-#Apply transparency         [Y] // Good for file opimisation,       (Enable make space pink when running Map-world, Hides background elements (E.g planets, SS12))
-#Goonhub formatting         [N] // Splices the image into 1200x1200 segments and names them "X,Y.png" accordingly
+# RAW Image directory/           // Location of map screenshots,     (USE A SEPERATE FOLDER for each map, There should only be 100 images)
+# PROCESSED Image Directory      // Location of all outputed files   (Files with matching names will be overwritten)
+# RAW Image Renaming         [N] // Rename all .png files in the raw image folder (Optional)
+# RAW Image Name             // New [name] for RAW images, Uses "[name]_[INT].png" format
+# Export Full Image          [Y] // Export a full image of the map
+# Export Image Name          // Name of the Full exported image  (E.g Cogmap1_full)
+# Apply transparency         [Y] // Good for file opimisation,       (Enable make space pink when running Map-world, Hides background elements (E.g planets, SS12))
+# Goonhub formatting         [N] // Splices the image into 1200x1200 segments and names them "X,Y.png" accordingly
 #                            ^ Default values
 
-#*****************************************************************
-#******ALL .pngs in the rawimages folder will be processed********
-#******Exported files may be overwritten/renamed in the output****
-#*****************************************************************
+# *****************************************************************
+# ******ALL .pngs in the rawimages folder will be processed********
+# ******Exported files may be overwritten/renamed in the output****
+# *****************************************************************
 
-from select import select
-from PIL import Image, ImageDraw
-from os import listdir, rename, path
+from PIL import Image
+from os import listdir, rename
 
 # Selection of Input/Output directories
 rawimgdir = str(input("Directory of RAW images: "))
@@ -45,14 +45,16 @@ imgdir = str(input("Directory for PROCESSED images:"))
 
 
 # Selection for RAWimage renaming
-SELimagerenamer = str(input("Rename ALL RAW .png files to '[name]_[INT].png' [y/" f"\033[1mN\033[0m]:"))
+SELimagerenamer = str(
+    input("Rename ALL RAW .png files to '[name]_[INT].png' [Y/\033[1mN\033[0m]:")
+)
 if SELimagerenamer.lower() == "y" or SELimagerenamer.lower() == "yes":
     RAWfilename = str(input("RAW image [name]: "))
     SELimagerenamer = True
 
 
 # Selection for exporting a full size image
-SELexportfullimage = input("Save a full image? [Y/" f"\033[1mn\033[0m]: ")
+SELexportfullimage = input("Save a full image? [Y/" "\033[1mN\033[0m]: ")
 if SELexportfullimage.lower() == "n" or SELexportfullimage.lower() == "no":
     SELexportfullimage = False
 else:
@@ -60,8 +62,8 @@ else:
     SELexportfullimage = True
 
 
-#Selection for applying transparency to purple areas (GoonhubSplices will be purple without this)
-SELtransparency = input("Make Pink areas transparent?(Slow) [Y/" f"\033[1mn\033[0m]:")
+# Selection for applying transparency to purple areas (GoonhubSplices will be purple without this)
+SELtransparency = input("Make Pink areas transparent?(Slow) [Y/" "\033[1mN\033[0m]:")
 if SELtransparency.lower() == "n" or SELtransparency.lower() == "no":
     SELtransparency = False
 else:
@@ -69,7 +71,9 @@ else:
 
 
 # Splice/Rename the image into Goonhub compatable images
-SELgoonhubsplice = input("Splice & Rename image into GoonHub formating? [y/" f"\033[1mN\033[0m]:")
+SELgoonhubsplice = input(
+    "Splice & Rename image into GoonHub formating? [Y/" "\033[1mN\033[0m]:"
+)
 if SELgoonhubsplice.lower() == "y" or SELgoonhubsplice.lower() == "yes":
     SELgoonhubsplice = True
 
@@ -77,13 +81,15 @@ if SELgoonhubsplice.lower() == "y" or SELgoonhubsplice.lower() == "yes":
 # Function for renming RAW images to [NAME]_[INT].png, E.g Cogmap1_22.png
 def func_imagerenamer():
     x = y = 1
-    imagelist = [file for file in (sorted(listdir(rawimgdir), key=len)) if file.endswith('.png')]
+    imagelist = [
+        file for file in (sorted(listdir(rawimgdir), key=len)) if file.endswith(".png")
+    ]
     for file_name in imagelist:
-        source = rawimgdir +"\\"+ file_name
-        new = rawimgdir +"\\"+ f"{RAWfilename}_{x}.png"
-        # Change new filename preset here ^^^^^^^^^^^ 
+        source = rawimgdir + "\\" + file_name
+        new = rawimgdir + "\\" + f"{RAWfilename}_{x}.png"
+        # Change new filename preset here ^^^^^^^^^^^
         rename(source, new)
-        x+=1
+        x += 1
 
 
 # Function for applying transparency to all purple areas[254,0,232] Will take 30 secs to process
@@ -103,13 +109,13 @@ def func_transparancy():
 # Function for saving the image (params: name=Filename, export=Image IMG variable)
 def func_exportfullimage(name, export):
     print("SAVING IMAGE")
-    file = (imgdir+"\\"+name+".png")
+    file = imgdir + "\\" + name + ".png"
     print(file)
     file = open(file, "wb")
-    export.save(file) 
+    export.save(file)
 
 
-#Sometimes it warns sometimes it doesn't I dunno
+# Sometimes it warns sometimes it doesn't I dunno
 print("DecompressionBombWarnings may occour due to image size")
 
 
@@ -147,18 +153,18 @@ def func_goonhubsplice():
             func_exportfullimage(f"{i},{j}", a)
 
 
-#Function calls according to previous user selections
-if SELimagerenamer == True:
-    #Shouldn't matter if ran before or after processing
+# Function calls according to previous user selections
+if SELimagerenamer:
+    # Shouldn't matter if ran before or after processing
     func_imagerenamer()
 
-if SELtransparency == True:
+if SELtransparency:
     func_transparancy()
 
-if SELexportfullimage == True:
+if SELexportfullimage:
     func_exportfullimage(exportfilename, masterexport)
 
-if SELgoonhubsplice == True:
+if SELgoonhubsplice:
     func_goonhubsplice()
 
 
