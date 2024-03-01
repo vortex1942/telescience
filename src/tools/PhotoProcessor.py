@@ -39,10 +39,6 @@
 from PIL import Image
 from os import listdir, rename
 
-# Selection of Input/Output directories
-raw_img_dir = str(input("Directory of RAW images: "))
-img_dir = str(input("Directory for PROCESSED images:"))
-
 
 def get_user_choice(prompt):
     choice = input(prompt).lower()
@@ -50,26 +46,6 @@ def get_user_choice(prompt):
         return True
     else:
         return False
-
-
-rename_image = get_user_choice(
-    "Rename ALL RAW .png files to '[name]_[INT].png' [Y/\033[1mN\033[0m]:"
-)
-if rename_image:
-    RAWfilename = str(input("RAW image [name]: "))
-
-
-export_full_image = get_user_choice("Save a full image? [Y/\033[1mN\033[0m]:")
-if export_full_image:
-    exportfilename = str(input("Filename for Full Image (E.g Cogmap1_full): "))
-
-transparency = get_user_choice(
-    "Make Pink areas transparent?(Slow) [Y/\033[1mN\033[0m]:"
-)
-
-goonhub_splice = get_user_choice(
-    "Splice & Rename image into GoonHub formating? [Y/\033[1mN\033[0m]:"
-)
 
 
 # Function for renming RAW images to [NAME]_[INT].png, E.g Cogmap1_22.png
@@ -111,44 +87,67 @@ def func_exportfullimage(name, export):
     export.save(file)
 
 
-# Sometimes it warns sometimes it doesn't I dunno
-print("DecompressionBombWarnings may occour due to image size")
+# Selection of Input/Output directories
+raw_img_dir = str(input("Directory of RAW images: "))
+img_dir = str(input("Directory for PROCESSED images:"))
+
+
+rename_image = get_user_choice(
+    "Rename ALL RAW .png files to '[name]_[INT].png' [Y/\033[1mN\033[0m]:"
+)
+if rename_image:
+    RAWfilename = str(input("RAW image [name]: "))
+
+
+export_full_image = get_user_choice("Save a full image? [Y/\033[1mN\033[0m]:")
+if export_full_image:
+    exportfilename = str(input("Filename for Full Image (E.g Cogmap1_full): "))
+
+transparency = get_user_choice(
+    "Make Pink areas transparent?(Slow) [Y/\033[1mN\033[0m]:"
+)
+
+goonhub_splice = get_user_choice(
+    "Splice & Rename image into GoonHub formating? [Y/\033[1mN\033[0m]:"
+)
 
 
 # Where the magic happens, Creates a canvas and pastes RAWimages in a grid fashion
+
+# Sometimes it warns sometimes it doesn't I dunno
+print("DecompressionBombWarnings may occour due to image size")
+
 master_export = Image.new("RGBA", (9600, 9600), color=(255, 255, 255, 255))
-imagelist = [
+image_list = [
     file for file in sorted(listdir(raw_img_dir), key=len) if file.endswith(".png")
 ]
-x = ic = fc = 0
-per = 10
-y = 8640
-# For loop stitches RAw images together
-for p in imagelist:
-    file = raw_img_dir + "\\" + str(imagelist[ic])
-    photo = Image.open(file).convert("RGBA")
-    if fc == 10:
-        fc = x = 0
-        y -= 960
-        per += 10
-        print(per, "%")
-    # Verbose mode [Iteration]   [Image Coords]  [RAW Filename]
-    # print("iter: " f"{fc : >2}", "IMG XY: " f"{x : >4}", f"{y : >4}", "FILE: " f"{imagelist[ic] : >13}")
-    master_export.paste(photo, (x, y))
+x = 0
+y = 0
+for index, image_path in enumerate(image_list):
+    file = raw_img_dir + "\\" + str(image_path)
+    image = Image.open(file).convert("RGBA")
+    if x == 9600:
+        x = 0
+        y += 960
+
+    print(
+        f"POS: {x//960}:{y//960}",
+        f"FILE: {image_path : >13}",
+    )
+
+    master_export.paste(image, (x, y))
     x += 960
-    ic += 1
-    fc += 1
 
 
 # Function splices the large image into Goonhub Compatable images [1200x1200 w/ name=(x,y.png)]
 def func_goonhubsplice():
-    height = 9600 // 8
-    width = 9600 // 8
-    for i in range(0, 8):
-        for j in range(0, 8):
-            box = (j * width, i * height, (j + 1) * width, (i + 1) * height)
+    width = height = 960
+    goon_row_size = 9
+    for x in range(0, goon_row_size + 1):
+        for y in range(0, goon_row_size + 1):
+            box = (y * width, x * height, (y + 1) * width, (x + 1) * height)
             a = master_export.crop(box)
-            func_exportfullimage(f"{i},{j}", a)
+            func_exportfullimage(f"{y},{x}", a)  # Yes it's y before x, Blame GoonAPIv2
 
 
 # Function calls according to previous user selections
