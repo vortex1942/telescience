@@ -70,7 +70,7 @@ def func_transparancy():
     data = master_export.getdata()
     transparancy_data = []
     for item in data:
-        if item[0] == 254 and item[1] == 0 and item[2] == 232:
+        if item[0] == 255 and item[1] == 0 and item[2] == 228:
             transparancy_data.append((255, 255, 255, 0))
         else:
             transparancy_data.append(item)
