@@ -13,7 +13,7 @@
 # 1. Give yourself Godmode, and the XRAY mutation [Toggle-Your-Godmode, Manage-Bioeffects > Name > + > XRAY]
 # 2. Place PDA and all items in backpack (Either hide your backpack in a locker or repeat Step4)
 # 3. Del-all /atom/moveable/screen/hud
-# 4. Right-click the Yellow stamina box > View Variables > Edit [visibility] = 0
+# 4. Right-click the Yellow stamina box > View Variables > Hard Delete
 # 5. Game > Effects > Parallax # Lets us turn space purple
 # 6. Run Map-World command (All defaults except for Z-Level)
 # 7 Place screenshots into a folder dedicated for raw images (You should have 100 Images)
