@@ -189,6 +189,20 @@ const Main = props => {
                     // Tiburón bebé
                     { link: 'https://youtu.be/XqZsoesa55w?t=12', pos: [3, 4], color: '#6D7373' }
                 )}
+            {selectedMap === 'kondaru' &&
+                easterEgg(
+                    // Banana
+                    {
+                        link:
+                            Math.round(Math.random()) === 0
+                                ? 'https://youtu.be/yModCU1OVHY?t=51'
+                                : 'https://youtu.be/j5C6X9vOEkU',
+                        pos: [120, 141], color: '#48773C'
+                    },
+                    // Tiburón bebé
+                    { link: 'https://youtu.be/nxMMElT61A8', pos: [150, 147], color: '#2A282B' }
+            )}
+            
             <Overlay
                 selectedTile={tf.selectedTile}
                 centerCoords={centerCoords}
