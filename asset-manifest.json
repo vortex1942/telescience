@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/telescience/static/css/main.65489345.css",
-    "main.js": "/telescience/static/js/main.1820d527.js",
+    "main.js": "/telescience/static/js/main.07141d4f.js",
     "static/media/space.png": "/telescience/static/media/space.65d39b69e87294b6fb3f.png",
     "index.html": "/telescience/index.html",
     "main.65489345.css.map": "/telescience/static/css/main.65489345.css.map",
-    "main.1820d527.js.map": "/telescience/static/js/main.1820d527.js.map"
+    "main.07141d4f.js.map": "/telescience/static/js/main.07141d4f.js.map"
   },
   "entrypoints": [
     "static/css/main.65489345.css",
-    "static/js/main.1820d527.js"
+    "static/js/main.07141d4f.js"
   ]
 }
