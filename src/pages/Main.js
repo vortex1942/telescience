@@ -316,6 +316,11 @@ const Main = props => {
         const { clientX, clientY } = e;
         // Detect if we moved
         if (tf.mouse[0] !== clientX || tf.mouse[1] !== clientY) return;
+
+        window.gtag && window.gtag('event', 'map_move', {
+            "selectedCoords": selectedMap + "," + tileMath(...imgCoords(clientX, clientY)),
+        });
+
         return transform(tf => ({ ...tf, selectedTile: tileMath(...imgCoords(clientX, clientY)) }));
     }
 

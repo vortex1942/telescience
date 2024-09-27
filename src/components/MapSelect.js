@@ -16,6 +16,7 @@ const styles = theme => ({
 
 const MapSelect = props => {
     const { classes, selectMap, selectedMap } = props;
+
     return (
         <Paper className={classes.paper}>
             <FormControl className={classes.textField}>
@@ -25,6 +26,12 @@ const MapSelect = props => {
                     value={selectedMap}
                     onChange={e => {
                         let val = e.target.value;
+                        
+                        // Send event to Google Analytics so I can build a cool graph
+                        window.gtag && window.gtag('event', 'map_change', {
+                            "newMap": val
+                        });
+
                         return selectMap(val);
                     }}
                 >
