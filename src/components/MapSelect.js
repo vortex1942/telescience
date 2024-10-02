@@ -27,11 +27,6 @@ const MapSelect = props => {
                     onChange={e => {
                         let val = e.target.value;
                         
-                        // Send event to Google Analytics so I can build a cool graph
-                        window.gtag && window.gtag('event', 'map_change', {
-                            "newMap": val
-                        });
-
                         return selectMap(val);
                     }}
                 >
