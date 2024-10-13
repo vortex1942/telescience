@@ -40,7 +40,8 @@ const MapSelect = props => {
                     <option value="oshan">Oshan</option>
                     <option value="clarion">Clarion</option>
                     <option value="atlas">Atlas</option> 
-
+                    <option value="ozymandias">Ozymandias</option>  
+                    <option value="decarabia">Decarabia</option>        
                 </Select>
             </FormControl>
         </Paper>

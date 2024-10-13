@@ -33,6 +33,8 @@ const Images = ({ selectedMap, image }) => {
             kondaru: `https://goonhub.com/storage/maps/kondaru`,
             donut2: `https://goonhub.com/storage/maps/donut2`,
             donut3: `https://goonhub.com/storage/maps/donut3`,
+            ozymandias: `https://goonhub.com/storage/maps/ozymandias`,
+            decarabia: `https://goonhub.com/storage/maps/decarabia`,
             adventurezone: `images/adventurezone/`,
 
         };   
