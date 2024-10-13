@@ -116,6 +116,12 @@ const Main = props => {
             { name: 'Museum of Lunar History', location: [105, 212] },
             { name: 'Solar Observatory', location: [97, 87] }
         ],
+        ozymandias: [
+            { name: 'Lord Singuloth', location: [224, 204] },
+        ],
+        decarabia: [
+            { name: 'Oasis', location: [232, 44] },
+        ],
     });
     const [zoom, setZoom] = useState(7);
     const scale = zoom / 10;
