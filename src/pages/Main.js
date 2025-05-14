@@ -106,6 +106,12 @@ const Main = props => {
             { name: 'The Ring', location: [175, 115] },
             { name: 'Telescience', location: [140, 162] },
         ],
+        neon: [
+        ],
+        wrestlemap: [
+        ],
+        pod_wars: [
+        ],
         adventurezone: [
             { name: 'Ainley Staff Retreat', location: [158, 257] },
             { name: 'Biodome', location: [120, 164] },
