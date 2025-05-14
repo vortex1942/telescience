@@ -40,6 +40,9 @@ const MapSelect = props => {
                     <option value="oshan">Oshan</option>
                     <option value="clarion">Clarion</option>
                     <option value="atlas">Atlas</option> 
+                    <option value="neon">Neon</option>
+                    <option value="pod_wars">Pod Wars</option>
+                    <option value="wrestlemap">Wrestlemap</option>
                     <option value="ozymandias">Ozymandias</option>  
                     <option value="decarabia">Decarabia</option>        
                 </Select>
